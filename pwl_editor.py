@@ -913,12 +913,12 @@ class PWLEditor:
             add_input("占空比 (%):", "duty", "50")
             add_input("上升时间 (s):", "tr", "1n")
             add_input("下降时间 (s):", "tf", "1n")
-            add_input("高电平时间 (s):", "t_high", "")
+            add_input("高电平时间 (s):", "t_high", "500u")
         elif wave_type == "sine":
             add_input("每周期点数:", "points_per_cycle", "50")
         elif wave_type == "triangle":
             add_input("上升占比 (%):", "rise_ratio", "50")
-            add_input("上升时间 (s):", "t_rise", "")
+            add_input("上升时间 (s):", "t_rise", "500u")
             
         syncing = {"fp": False, "sq": False, "tr": False}
 
