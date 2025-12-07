@@ -1260,6 +1260,18 @@ class PWLEditor:
         
         ctk.CTkButton(g3, text="缩放全部(F)", command=self.zoom_to_all_points).pack(fill=ctk.X, pady=2)
         
+        # Precision
+        row_p = ctk.CTkFrame(g3, fg_color="transparent")
+        row_p.pack(fill=ctk.X, pady=(5, 2))
+        ctk.CTkLabel(row_p, text="拖动精度:", anchor="w").pack(side=ctk.LEFT)
+        self.precision_var = ctk.StringVar(value="1m")
+        precision_combo = ctk.CTkComboBox(
+            row_p, variable=self.precision_var,
+            values=["1", "0.1", "0.01", "1m"], state="readonly", width=100,
+            command=self._on_precision_change_ctk
+        )
+        precision_combo.pack(side=ctk.RIGHT, padx=(5,0))
+        
         # Y-Axis
         ctk.CTkLabel(g3, text="Y轴范围:", anchor="w").pack(fill=ctk.X, pady=(5,0))
         row_y = ctk.CTkFrame(g3, fg_color="transparent")
@@ -1270,18 +1282,6 @@ class PWLEditor:
         self.y_max_entry = ctk.CTkEntry(row_y, width=60)
         self.y_max_entry.pack(side=ctk.LEFT, fill=ctk.X, expand=True)
         ctk.CTkButton(row_y, text="Set", width=40, command=self.set_y_axis).pack(side=ctk.RIGHT, padx=(5,0))
-        
-        # Precision
-        row_p = ctk.CTkFrame(g3, fg_color="transparent")
-        row_p.pack(fill=ctk.X, pady=(10, 2))
-        ctk.CTkLabel(row_p, text="拖动精度:", anchor="w").pack(side=ctk.LEFT)
-        self.precision_var = ctk.StringVar(value="1m")
-        precision_combo = ctk.CTkComboBox(
-            row_p, variable=self.precision_var,
-            values=["1", "0.1", "0.01", "1m"], state="readonly", width=100,
-            command=self._on_precision_change_ctk
-        )
-        precision_combo.pack(side=ctk.RIGHT, padx=(5,0))
 
     def _on_precision_change_ctk(self, choice):
         """CTK Combobox callback"""
