@@ -558,7 +558,7 @@ class PWLEditor:
         try:
             data = {
                 "points": self.points,
-                "version": "1.0",
+                "version": "1.1",
                 "type": "pwl_waveform"
             }
             with open(file_path, 'w') as f:
