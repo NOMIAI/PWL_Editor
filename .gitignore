@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.spec
+.pytest_cache/
+.venv/
+env/
+venv/
+.DS_Store
+
+# Build artifacts
+build/
+dist/
+
+# Tk / PyInstaller temp files
+*.log
+*.tmp
+*.bak
+*.dll
+*.pyd
+
+# IDE
+.vscode/
+.idea/
