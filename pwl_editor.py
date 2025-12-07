@@ -904,7 +904,7 @@ class PWLEditor:
         input_scroll_frame.grid_columnconfigure(1, weight=1)
         
         add_input("频率 (Hz):", "freq", "1k")
-        add_input("周期 (s):", "period", "")
+        add_input("周期 (s):", "period", "1m")
         add_input("幅度 (V):", "amp", "1.0")
         add_input("偏移 (V):", "offset", "0.0")
         add_input("时长 (s):", "duration", "5m")
