@@ -1,6 +1,7 @@
 # PWL波形编辑器 (PWL Editor)
 
 一个基于Python和CustomTkinter的现代PWL（Piecewise Linear）波形编辑器，专为Virtuoso仿真波形设计。
+本项目所有内容均为作者0代码使TraeIDE AI开发生成，作者不为任何问题负责。
 
 ## 功能特点
 
