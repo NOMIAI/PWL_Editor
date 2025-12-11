@@ -2,6 +2,7 @@
 
 一个基于Python和CustomTkinter的现代PWL（Piecewise Linear）波形编辑器，专为Virtuoso仿真波形设计。
 本项目所有内容均为作者0代码使TraeIDE AI开发生成，作者不为任何问题负责。
+<img width="1511" height="1038" alt="image" src="https://github.com/user-attachments/assets/0c994cfb-eaae-448c-bea3-558cc33144bc" />
 
 ## 功能特点
 
